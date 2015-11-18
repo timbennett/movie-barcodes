@@ -8,9 +8,9 @@ Turn video files into 'barcodes' where vertical lines represent the average colo
 * Python and [Python Imaging Library](http://www.pythonware.com/products/pil/)
  
 **Usage:**  
-    python process_video.py inputfile width height  
+    *python process_video.py inputfile width height*  
 e.g.  
-    python process_video.py bigbuckbunny.mp4 320 180
+    *python process_video.py bigbuckbunny.mp4 320 180*
 
 **Tips:**
 * If it doesn't work on Windows, you might have to change FFMPEG_BIN from "ffmpeg" to "ffmpeg.exe"
