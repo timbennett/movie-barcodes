@@ -18,9 +18,9 @@ e.g.
  
 **Details:**
 
-You may have seen sites like [moviebarcode](http://moviebarcode.tumblr.com/) or the [Movie Barcode Generator](http://arcanesanctum.net/movie-barcode-generator/). In short, they compress a movie into a single image, with vertical lines representing the average colours of sequential frames. Ideally this gives a glanceable idea of the movie's colour palette.
+You may have seen sites like [moviebarcode](http://moviebarcode.tumblr.com/), [The Colors of Motion](http://thecolorsofmotion.com/) or the [Movie Barcode Generator](http://arcanesanctum.net/movie-barcode-generator/). In short, they compress a movie into a single image, with vertical lines representing the average colours of sequential frames. Ideally this gives a glanceable idea of the movie's colour palette.
 
-While the tools above effectively squash each frame to a single pixel width (preserving some vertical gradients), this script uses a simpler process (the overall average colour). First find the average RGB values of all pixels in a single frame:
+While moviebarcode squashes each frame to a single pixel width (preserving some vertical gradients), this script uses a similar process to The Colors of Motion (a single colour per frame). First find the average RGB values of all pixels in a single frame:
 
 ![github-process-1](https://cloud.githubusercontent.com/assets/1192790/11238530/715e0d1e-8e3a-11e5-9736-68f2e67d21fc.png)
 
