@@ -1,7 +1,7 @@
 # Movie Barcode Generator
 ![github-bighero6](https://cloud.githubusercontent.com/assets/1192790/11238640/1f7ea5ac-8e3b-11e5-8c2b-e00758b1ec19.png)
 
-Turn video files into 'barcodes' where vertical lines represent the average colour of individual frames. [Example album.](http://imgur.com/gallery/Pw6LD/)
+Turn video files into 'barcodes' where vertical lines represent the average colour of individual frames. [Example album.](http://imgur.com/gallery/Pw6LD/) Uses code [published by zulko](http://zulko.github.io/blog/2013/09/27/read-and-write-video-frames-in-python-using-ffmpeg/).
 
 **Requirements:**
 * [ffmpeg](https://www.ffmpeg.org/)
@@ -15,6 +15,7 @@ e.g.
 **Tips:**
 * If it doesn't work on Windows, you might have to change FFMPEG_BIN from "ffmpeg" to "ffmpeg.exe"
 * Use low resolution videos! They provide identical results but are processed exponentially faster than high definition videos (I've seen above 1300fps). You're smearing all the details anyway.
+* By default, the resulting image will be as wide as the number of frames in the movie - probably several tens of thousands of pixels. However due to the nature of PNG files, it will only be a few hundred kilobytes! But you will need to use Photoshop or similar to format the images to your liking... or patch my code so the user can specify output size!
  
 **Details:**
 
