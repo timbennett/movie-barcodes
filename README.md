@@ -1,7 +1,7 @@
 # Movie Barcode Generator
 ![github-bighero6](https://cloud.githubusercontent.com/assets/1192790/11238640/1f7ea5ac-8e3b-11e5-8c2b-e00758b1ec19.png)
 
-Turn video files into 'barcodes' where vertical lines represent the average colour of individual frames.
+Turn video files into 'barcodes' where vertical lines represent the average colour of individual frames. [Example album.](http://imgur.com/gallery/Pw6LD/)
 
 **Requirements:**
 * [ffmpeg](https://www.ffmpeg.org/)
