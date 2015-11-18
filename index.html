@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Movie Barcodes : Turn video files into &#39;barcodes&#39; where vertical lines represent the average colour of individual frames.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Movie Barcodes</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/timbennett/movie-barcodes">View on GitHub</a>
+
+          <h1 id="project_title">Movie Barcodes</h1>
+          <h2 id="project_tagline">Turn video files into &#39;barcodes&#39; where vertical lines represent the average colour of individual frames.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/timbennett/movie-barcodes/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/timbennett/movie-barcodes/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="movie-barcode-generator" class="anchor" href="#movie-barcode-generator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Movie Barcode Generator</h1>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1192790/11238640/1f7ea5ac-8e3b-11e5-8c2b-e00758b1ec19.png" alt="github-bighero6"></p>
+
+<p>Turn video files into 'barcodes' where vertical lines represent the average colour of individual frames. <a href="http://imgur.com/gallery/Pw6LD/">Example album.</a> Uses code <a href="http://zulko.github.io/blog/2013/09/27/read-and-write-video-frames-in-python-using-ffmpeg/">published by zulko</a>.</p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+<li><a href="https://www.ffmpeg.org/">ffmpeg</a></li>
+<li>Python and <a href="http://www.pythonware.com/products/pil/">Python Imaging Library</a>
+</li>
+</ul>
+
+<p><strong>Usage:</strong><br>
+    <em>python process_video.py inputfile width height</em><br>
+e.g.<br>
+    <em>python process_video.py bigbuckbunny.mp4 320 180</em></p>
+
+<p><strong>Tips:</strong></p>
+
+<ul>
+<li>If it doesn't work on Windows, you might have to change FFMPEG_BIN from "ffmpeg" to "ffmpeg.exe"</li>
+<li>Use low resolution videos! They provide identical results but are processed exponentially faster than high definition videos (I've seen above 1300fps). You're smearing all the details anyway.</li>
+<li>By default, the resulting image will be as wide as the number of frames in the movie - probably several tens of thousands of pixels. However due to the nature of PNG files, it will only be a few hundred kilobytes! But you will need to use Photoshop or similar to format the images to your liking... or patch my code so the user can specify output size!</li>
+</ul>
+
+<p><strong>Details:</strong></p>
+
+<p>You may have seen sites like <a href="http://moviebarcode.tumblr.com/">moviebarcode</a>, <a href="http://thecolorsofmotion.com/">The Colors of Motion</a> or the <a href="http://arcanesanctum.net/movie-barcode-generator/">Movie Barcode Generator</a>. In short, they compress a movie into a single image, with vertical lines representing the average colours of sequential frames. Ideally this gives a glanceable idea of the movie's colour palette.</p>
+
+<p>While moviebarcode squashes each frame to a single pixel width (preserving some vertical gradients), this script uses a similar process to The Colors of Motion (a single colour per frame). First find the average RGB values of all pixels in a single frame:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1192790/11238530/715e0d1e-8e3a-11e5-9736-68f2e67d21fc.png" alt="github-process-1"></p>
+
+<p>And then to repeat the process for all frames:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/1192790/11238535/7664e6ac-8e3a-11e5-8989-6be607fa395e.png" alt="github-process-2"></p>
+
+<p>This should work with any movie file ffmpeg can handle (though in practice I've only tested it with mp4 files). </p>
+
+<p>(Images: <a href="https://peach.blender.org/download/">Big Buck Bunny</a>)</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Movie Barcodes maintained by <a href="https://github.com/timbennett">timbennett</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
